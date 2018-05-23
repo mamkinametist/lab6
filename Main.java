@@ -43,7 +43,7 @@ class dog extends pet{
         super();
     }
     public void infodog(){
-        System.out.print("Собака\nКличка:\t"+name+"\nВес:\t"+Float.toString(weight)+"\nПол:\t"+sex);
+        System.out.println("Собака\nКличка:\t"+name+"\nВес:\t"+Float.toString(weight)+"\nПол:\t"+sex);
     }
 }
 
@@ -52,32 +52,40 @@ class cat extends pet{
         super();
     }
     public void infocat(){
-        System.out.print("Кошка\nКличка:\t"+name+"\nВес:\t"+Float.toString(weight)+"\nПол:\t"+sex);
+        System.out.println("Кошка\nКличка:\t"+name+"\nВес:\t"+Float.toString(weight)+"\nПол:\t"+sex);
     }
 }
 
 class fish{
     protected int a;
     protected int b;
-
+    public void life(){
+        System.out.println("Хребет");
+    }
 }
 
 class animal extends fish{
     protected int c;
     protected int d;
-    //тут должен быть код
+    public void arm(){
+        System.out.println("Руки-ноги");
+    }
 }
 
 class ape extends animal{
     protected int e;
     protected int f;
-//тут должен быть код
+    public void Skill(){
+        System.out.println("Умения");
+    }
 }
 
 class human extends ape{
     protected int a;
     protected int b;
-//тут должен быть код
+    public void mind(){
+        System.out.println("Разум");
+    }
 }
 
 public class Main {
@@ -88,5 +96,10 @@ public class Main {
         b.infodog();
         cat c = new cat();
         c.infocat();
+        human d = new human();
+        d.life();
+        d.arm();
+        d.Skill();
+        d.mind();
     }
 }
